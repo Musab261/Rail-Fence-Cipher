@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import scrolledtext
 
-# ---------------- ENCODING ----------------
 def encoding(plain_text, rails):
     if rails == 1:
         return plain_text
@@ -25,7 +24,6 @@ def encoding(plain_text, rails):
 
     return encrypted_text
 
-# ---------------- DECODING ----------------
 def decoding(cipher_text, rails):
     if rails == 1:
         return cipher_text
@@ -63,7 +61,6 @@ def decoding(cipher_text, rails):
 
     return result
 
-# ---------------- GUI FUNCTIONS ----------------
 def encode_text():
     global encrypted_text
     plain_text = input_text.get("1.0", tk.END).strip().replace(" ", "")
@@ -85,7 +82,6 @@ def decode_text():
     decoded_box.delete("1.0", tk.END)
     decoded_box.insert(tk.END, decoded_text)
 
-# ---------------- GUI ----------------
 root = tk.Tk()
 root.title("Rail Fence Cipher")
 
